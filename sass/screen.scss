@@ -1,0 +1,87 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "susy";
+@import "base";
+
+/* Setting up the Grid */
+
+.wrap{
+	@include container;
+}
+
+/* Base Styles */
+
+body {
+	font-size: $font-main;
+	font-family:$text;
+	color: $gray;
+	background-image:url('../images/brushed.png');
+}
+#{headers()} {
+	margin:.5em 0;
+}
+
+h1 {
+	font-family:$headings;
+	font-size: $font-main * 4;
+	color:white;	
+}
+h2 {
+	font-size: $font-main * 2;
+}
+h3 {
+	font-size: $font-main * 1.5;
+}
+
+/*Section Styles */
+header,
+section,
+footer {
+	padding:20px 10px;
+}
+
+.extended {
+	display:none;
+}
+
+.readmore:hover .extended {
+	display: block;
+}
+header {
+	background-color: $gray;
+	float:right;
+	width:100%;
+	text-align: right;
+	h1 a {
+		text-decoration: none;
+		color:$cream;
+	}
+	h2 {
+		color:$cream;
+		font-size: $font-main * 1.5;
+	}
+}
+#main {
+	display:block;
+	clear:both;
+}
+#vision{
+}
+
+#register{
+	 
+}
+#contact{
+}
+
+#about {
+}
+
+footer {
+	background-color: $gray; 
+}
+
