@@ -157,6 +157,9 @@ footer {
 }
 
 @media screen and (max-width: 600px){
+	.sponsor h4 {
+		padding-left:0 !important;
+	}
 	#register .left, #register .right {
 		width: 100%;
 		float:left;
