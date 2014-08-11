@@ -2,86 +2,154 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-
-@import "compass/reset";
 @import "susy";
 @import "base";
 
-/* Setting up the Grid */
+@import "compass/reset";
+@import "compass/typography/links";
 
+/* Setting up the Grid */
 .wrap{
 	@include container;
 }
 
 /* Base Styles */
-
+* {
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+}
+html{
+	background-image: url(../images/wild_flowers.png);
+}
 body {
 	font-size: $font-main;
 	font-family:$text;
-	color: $gray;
-	background-image:url('../images/brushed.png');
-}
+	line-height: $font-main * 1.75;
+	color: $dark;
+/*	background-color: $white;
+*/}
 #{headers()} {
 	margin:.5em 0;
 }
 
+a {
+	@include link-colors($accent, darken($main-light,10%), $dark, darken($neutral,20%), $main-light);
+	text-decoration: none;
+}
 h1 {
 	font-family:$headings;
-	font-size: $font-main * 4;
-	color:white;	
+	font-size: $font-main * 2.25;
+	color:$white;	
 }
 h2 {
-	font-size: $font-main * 2;
+	font-size: $font-main * 1.75;
+	margin-bottom: 1em;
+
 }
 h3 {
-	font-size: $font-main * 1.5;
+	font-size: $font-main * 1.25;
+	color:$main;
+	border-bottom:3px double $main;
+	padding-top:1em;
 }
-
+h4 {
+	font-size:$font-main * 1.25;
+}
+strong {
+	font-weight:700;
+}
 /*Section Styles */
 header,
 section,
 footer {
-	padding:20px 10px;
+	padding:20px 0;
 }
-
-.extended {
-	display:none;
+section {
+	background-color:white;
+	padding:1em;
+	margin:2em 0; 
+	float:left;
+	width: 100%;
+	box-shadow: 6px 6px 10px 0px $dark;
+	-moz-box-shadow: 6px 6px 10px 0px $dark;
+	-webkit-box-shadow: 6px 6px 10px 0px $dark;
 }
-
-.readmore:hover .extended {
-	display: block;
+p{
+	margin:.5em 0;
 }
 header {
-	background-color: $gray;
+	background-color: $dark;
 	float:right;
 	width:100%;
 	text-align: right;
-	h1 a {
-		text-decoration: none;
-		color:$cream;
+	h1 {
+		margin:.25em 0;
 	}
 	h2 {
-		color:$cream;
-		font-size: $font-main * 1.5;
+		color:$neutral;
+		font-size: $font-main * 1.25;
 	}
 }
 #main {
 	display:block;
 	clear:both;
 }
-#vision{
-}
+#register {
+	width:100%;
+	.left{
+		width:50%;
+		float:left;
+		padding-right:.5em;
+	}
+	.right {
+		width: 50%;
+		float:right;
+		h3 {
+			padding-top:0;
+		}
+	}
+	.full{
+		width:100%;
+		float:left;
+	}
+	.sponsor {
+		width:100%;
+		float:left;
+		padding-bottom:1.5em;
+	}
+	.sponsor img {
+		float:left;
+		max-width: 100px;
+	}
+	.sponsor h4 {
+		float:left;
+		padding-left:1em;
+	}
 
-#register{
-	 
 }
-#contact{
-}
-
-#about {
-}
-
 footer {
-	background-color: $gray; 
+	background-color: $dark;
+	color:$white;
+	a {
+		color:$light;
+		&:visited{
+			color:$light;
+		}
+	} 
+	p {
+		float:left;
+	}
+}
+#contact {
+	float: right;
+	font-size: $font-main*1.5;
+	margin:.25em 0 ;
+	a{
+		padding:.5em;
+		&:last-of-type{
+			padding-right:0;
+		}
+	}
 }
 

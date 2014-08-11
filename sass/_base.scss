@@ -9,15 +9,24 @@ $grid-padding: 1em; // and 1em padding on the grid container
 // Colors
 
 // Red Palette
-$white: #fafaf5;
+$white: #fafafa;
 $cream: #f7f7ea;
 $red: #c74056;
 $maroon: #6e2c30;
 $gray: #453f43;
 $mauve: #cfc1ba;
 
+// Green Palette
+$dark: #515861; // gray
+$accent: #c99360;// orange
+$main: #509997; // green
+$neutral: #ced9de; // light gray
+$main-light: #65c4c7; // light green
+$light: #a6e1e3; // mint
+
+
 // Typography
 
 $headings:'Nova Square', cursive;
 $text:'Lato', Verdana, sans-serif;
-$font-main:16px;
+$font-main:18px;

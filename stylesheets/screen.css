@@ -75,59 +75,106 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 /* Base Styles */
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+html {
+  background-image: url(../images/wild_flowers.png);
+}
+
 body {
-  font-size: 16px;
+  font-size: 18px;
   font-family: "Lato", Verdana, sans-serif;
-  color: #453f43;
-  background-image: url("../images/brushed.png");
+  line-height: 31.5px;
+  color: #515861;
+  /*	background-color: $white;
+  */
 }
 
 h1, h2, h3, h4, h5, h6 {
   margin: .5em 0;
 }
 
+a {
+  color: #c99360;
+  text-decoration: none;
+}
+a:visited {
+  color: #91aab5;
+}
+a:focus {
+  color: #65c4c7;
+}
+a:hover {
+  color: #42b3b7;
+}
+a:active {
+  color: #515861;
+}
+
 h1 {
   font-family: "Nova Square", cursive;
-  font-size: 64px;
-  color: white;
+  font-size: 40.5px;
+  color: #fafafa;
 }
 
 h2 {
-  font-size: 32px;
+  font-size: 31.5px;
+  margin-bottom: 1em;
 }
 
 h3 {
-  font-size: 24px;
+  font-size: 22.5px;
+  color: #509997;
+  border-bottom: 3px double #509997;
+  padding-top: 1em;
+}
+
+h4 {
+  font-size: 22.5px;
+}
+
+strong {
+  font-weight: 700;
 }
 
 /*Section Styles */
 header,
 section,
 footer {
-  padding: 20px 10px;
+  padding: 20px 0;
 }
 
-.extended {
-  display: none;
+section {
+  background-color: white;
+  padding: 1em;
+  margin: 2em 0;
+  float: left;
+  width: 100%;
+  box-shadow: 6px 6px 10px 0px #515861;
+  -moz-box-shadow: 6px 6px 10px 0px #515861;
+  -webkit-box-shadow: 6px 6px 10px 0px #515861;
 }
 
-.readmore:hover .extended {
-  display: block;
+p {
+  margin: .5em 0;
 }
 
 header {
-  background-color: #453f43;
+  background-color: #515861;
   float: right;
   width: 100%;
   text-align: right;
 }
-header h1 a {
-  text-decoration: none;
-  color: #f7f7ea;
+header h1 {
+  margin: .25em 0;
 }
 header h2 {
-  color: #f7f7ea;
-  font-size: 24px;
+  color: #ced9de;
+  font-size: 22.5px;
 }
 
 #main {
@@ -135,6 +182,61 @@ header h2 {
   clear: both;
 }
 
+#register {
+  width: 100%;
+}
+#register .left {
+  width: 50%;
+  float: left;
+  padding-right: .5em;
+}
+#register .right {
+  width: 50%;
+  float: right;
+}
+#register .right h3 {
+  padding-top: 0;
+}
+#register .full {
+  width: 100%;
+  float: left;
+}
+#register .sponsor {
+  width: 100%;
+  float: left;
+  padding-bottom: 1.5em;
+}
+#register .sponsor img {
+  float: left;
+  max-width: 100px;
+}
+#register .sponsor h4 {
+  float: left;
+  padding-left: 1em;
+}
+
 footer {
-  background-color: #453f43;
+  background-color: #515861;
+  color: #fafafa;
+}
+footer a {
+  color: #a6e1e3;
+}
+footer a:visited {
+  color: #a6e1e3;
+}
+footer p {
+  float: left;
+}
+
+#contact {
+  float: right;
+  font-size: 27px;
+  margin: 0.25em 0;
+}
+#contact a {
+  padding: .5em;
+}
+#contact a:last-of-type {
+  padding-right: 0;
 }
