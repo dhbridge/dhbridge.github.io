@@ -94,6 +94,14 @@ body {
   */
 }
 
+em {
+  font-style: italic;
+}
+
+hr {
+  margin: 1.5em 0;
+}
+
 h1, h2, h3, h4, h5, h6 {
   margin: .5em 0;
 }
@@ -213,6 +221,20 @@ header h2 {
 #register .sponsor h4 {
   float: left;
   padding-left: 1em;
+}
+
+.schedule {
+  width: 100%;
+  float: left;
+  margin: 1em 0 1.5em;
+}
+.schedule th, .schedule td {
+  padding-bottom: .5em;
+}
+.schedule th {
+  /*		padding-right:20px;
+  */
+  width: 160px;
 }
 
 footer {
