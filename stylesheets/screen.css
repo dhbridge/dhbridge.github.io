@@ -185,6 +185,16 @@ header h2 {
   font-size: 22.5px;
 }
 
+nav a {
+  display: inline-block;
+  padding: 0 1em;
+  border-right: 1px solid #91aab5;
+}
+nav a:last-of-type {
+  padding-right: 0;
+  border-right: none;
+}
+
 #main {
   display: block;
   clear: both;

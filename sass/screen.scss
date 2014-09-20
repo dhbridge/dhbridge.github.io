@@ -97,6 +97,17 @@ header {
 		font-size: $font-main * 1.25;
 	}
 }
+
+nav a {
+	display: inline-block;
+    padding:0 1em;
+    border-right:1px solid #91aab5;
+
+    &:last-of-type{
+    	padding-right:0;
+	  	border-right:none;
+    }
+}
 #main {
 	display:block;
 	clear:both;
