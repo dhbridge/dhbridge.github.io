@@ -1,0 +1,62 @@
+#main {
+  display: block;
+  clear: both;
+}
+
+#register {
+  width: 100%;
+}
+#register .left {
+  width: 50%;
+  float: left;
+  padding-right: .5em;
+}
+#register .right {
+  width: 50%;
+  float: right;
+}
+#register .right h3 {
+  padding-top: 0;
+}
+#register .full {
+  width: 100%;
+  float: left;
+}
+#register .sponsor {
+  width: 100%;
+  float: left;
+  padding-bottom: 1.5em;
+}
+#register .sponsor img {
+  float: left;
+  max-width: 100px;
+}
+#register .sponsor h4 {
+  float: left;
+  padding-left: 1em;
+}
+
+.schedule {
+  width: 100%;
+  float: left;
+  margin: 1em 0 1.5em;
+}
+.schedule th, .schedule td {
+  padding-bottom: .5em;
+}
+.schedule th {
+  /*		padding-right:20px;
+  */
+  width: 160px;
+}
+
+@media screen and (max-width: 600px) {
+  .sponsor h4 {
+    padding-left: 0 !important;
+  }
+
+  #register .left, #register .right {
+    width: 100%;
+    float: left;
+  }
+}
