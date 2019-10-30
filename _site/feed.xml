@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DH Bridge</title>
+    <description>Encouraging Computational Thinking and Digital Skills in the Humanities
+</description>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Wed, 30 Oct 2019 10:54:50 -0700</pubDate>
+    <lastBuildDate>Wed, 30 Oct 2019 10:54:50 -0700</lastBuildDate>
+    <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <title>DH Bridge at CSDH/SCHN</title>
+        <description>&lt;p&gt;We are thrilled to be presenting a “digital demonstration” of DH Bridge at CSDH/SCHN on Monday, May 30th at the University of Calgary! Come by and say “hi” in MacKimmie 202B at 3:30!&lt;/p&gt;
+</description>
+        <pubDate>Sun, 29 May 2016 10:51:43 -0700</pubDate>
+        <link>http://localhost:4000/conference/2016/05/29/DHBridge-at-CSDH.html</link>
+        <guid isPermaLink="true">http://localhost:4000/conference/2016/05/29/DHBridge-at-CSDH.html</guid>
+        
+        
+        <category>conference</category>
+        
+      </item>
+    
+      <item>
+        <title>Lessons Learned from “Bridging the Gap: Women, Code, and the Digital Humanities”</title>
+        <description>&lt;p&gt;&lt;em&gt;Initially published on the &lt;a href=&quot;http://ach.org/2015/05/06/bridging-the-gap/&quot;&gt;Association for Computers and the Humanities&lt;/a&gt; site.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;This fall we had the opportunity to launch &lt;a href=&quot;http://dhbridge.org/&quot;&gt;DH Bridge&lt;/a&gt;, an open curriculum and workshop framework for teaching computational thinking in the context of the humanities, funded by an ACH microgrant. Borrowing liberally from &lt;a href=&quot;http://www.railsbridge.org/&quot;&gt;Rails Bridge&lt;/a&gt; and &lt;a href=&quot;http://railsgirls.com/&quot;&gt;Rails Girls&lt;/a&gt;, we set out to adapt the model of a distributed pedagogy to the needs of humanities scholars who, while not looking to become programmers per se, want to develop the skills and patterns of thinking necessary to apply computational methods to their scholarship.&lt;/p&gt;
+
+&lt;p&gt;Computational thinking is a pattern of problem solving that involves organizing and analyzing data, abstracting in search of patterns, and breaking complex problems into discrete, solvable parts (&lt;a href=&quot;https://www.cs.cmu.edu/~15110-s13/Wing06-ct.pdf&quot;&gt;Jeannette Wing, 2006&lt;/a&gt;, doi: &lt;a href=&quot;http://dx.doi.org/10.1145/1118178.1118215&quot;&gt;10.1145/1118178.1118215&lt;/a&gt;). It enables humanities researchers to formulate new questions and to think through how to leverage both data and computational processes to explore those questions. While these skills may be taught in the context of a particular programming language, in our case Python, the patterns of thought are transferable to any language or computational process.&lt;/p&gt;
+
+&lt;p&gt;For the DH Bridge curriculum, we wanted to provide concrete exposure to the ways scholars might leverage data and code in the service of humanities questions. We also wanted participants to leave the workshop with a sense of how to approach a problem computationally, as well as to begin using the computer to perform the desired analysis. To achieve these goals, we used data from the &lt;a href=&quot;http://dp.la/&quot;&gt;Digital Public Library of America&lt;/a&gt; as the foundation for our curriculum and asked participants to explore the ways the collection’s holdings related to “cooking” were gendered. Breaking this abstract question into computationally solvable parts meant walking participants through using the DPLA’s API, parsing the JSON output, isolating particular data points, and using the &lt;a href=&quot;http://www.nltk.org/&quot;&gt;Natural Language Toolkit&lt;/a&gt; for Python to find patterns in the text.&lt;/p&gt;
+
+&lt;p&gt;In what follows, we will discuss the pedagogical choices we made, our development process for the curriculum, and lessons learned from the workshop held on November 1, 2014.&lt;/p&gt;
+
+&lt;h2 id=&quot;pedagogical-choices&quot;&gt;Pedagogical Choices:&lt;/h2&gt;
+
+&lt;p&gt;Working from our observations and participant feedback from Rails Girls DH, we wanted to make a few deliberate pedagogical changes for the new curriculum:&lt;/p&gt;
+
+&lt;p&gt;Work from concrete problem to abstract concepts. 
+Focus on computational thinking and helping participants build a mental model of the computer, data, and working computationally.
+Design the tutorial to potentially be a standalone reference (for people with some programming experience), but pair it with the coaches guide to give a more personalized and enhanced learning experience.&lt;/p&gt;
+
+&lt;p&gt;In working purposefully from a concrete problem and data to more abstract concepts, we wanted to provide a clear entry point for humanities scholars. This is the opposite approach from what is commonly pursued in coding tutorials, where concepts and descriptions of terms and elements are defined in the abstract first. We’ve observed that this adds a layer of difficulty for participants in translating to actual implementation. At the same time, we were concerned about the desire to understand “all the details”–meaning the more abstract computer science conceptual foundations–before being willing to play, which can also keep people from being willing to engage with hands-on learning. By starting with a model of computational thinking that considers the computer, data, and research questions in conversation from the beginning, we sought to present a balanced approach between the conceptual and technical.&lt;/p&gt;
+
+&lt;p&gt;In terms of the curriculum, there are two main components: a detailed tutorial made up of 14 modules and a coaches’ guide. Each addresses different aspects of the learning goals, although they were conceived to work together and be implemented together by potential future workshop organizers. For people with some programming experience, the tutorial could serve as a standalone reference and step-by-step guide. In putting the tutorial together, it became clear that some of the important context and explanations didn’t fit well within the narrative flow of the modules. We decided that this material would be best served through discussion among the participants and the coaches, and so wrote the coaches’ guide with learning checks, discussion questions, and the key concepts for each module. We wanted to emphasize this social aspect of learning, and we found that could only be achieved through conversations in the room during the workshop itself.&lt;/p&gt;
+
+&lt;h2 id=&quot;iterative-process&quot;&gt;Iterative Process:&lt;/h2&gt;
+
+&lt;p&gt;While developing the curriculum, we asked for and received substantive feedback from a number of our peers and professors. Knowing that participants would likely be a mix of Mac and Windows users, we wrote instructions for each and repeatedly tested the tutorial on both operating systems. Two weeks prior to the workshop, we got together with a number of the coaches for a dress rehearsal of the curriculum. We gathered valuable feedback and made final tweaks, clarified directions in the tutorial, fleshed out concepts, and added parts to the coaches guide to reinforce our model of computational thinking and keep everything aligned with the learning goals.&lt;/p&gt;
+
+&lt;h2 id=&quot;lessons-learned&quot;&gt;Lessons Learned:&lt;/h2&gt;
+
+&lt;p&gt;For this kind of workshop, we found that a participant to coach ratio of 2-3 to 1 seemed to work much better than our Rails Girls DH ratio of 5 to 1. For DH Bridge, there were plenty of coaches around to answer questions and troubleshoot, so participants were generally not stuck for long. One thing that we noticed was how the ratio affected collaborative group activities. Participants on the whole progressed at their own pace, which was great, but this made it difficult to stop for the learning checks and discussions we’d built into the modules. Also, the number of coaches at hand made participants more likely to ask them immediately for help rather than hash problems out with their group members. Balancing the asynchronous and synchronous aspects will be an ongoing consideration as we refine our workshop model. We gathered feedback informally after the event and through an optional survey. Several DH Bridge participants shared with us that they believed in their ability to translate the skills and concepts gained throughout the day to their current work, but we have yet to develop an effective way of assessing long-term learning. Maintaining a sense of community and following-up with participants is also a tricky proposition for us since participants came from a range of institutions across the DC metro area and from as far as Davidson College in North Carolina.&lt;/p&gt;
+
+&lt;h2 id=&quot;next-steps&quot;&gt;Next Steps:&lt;/h2&gt;
+
+&lt;p&gt;In the near future we will work to fix the small errors that were encountered as part of the event. We also plan to review feedback from the participants and coaches to assess what other adjustments are needed going forward. Longer term goals include writing a version of the tutorials for Python3, as well as soliciting ideas for additional modules that would be useful for humanities scholars. In addition, we would like to think through how to continue efforts to effectively partner with underrepresented populations to help more interested people take part in DH Bridge.&lt;/p&gt;
+
+&lt;p&gt;There are an ever increasing number of opportunities for training in the digital humanities, from informal workshops held at THATCamps to multiple week training programs, such as the NEH Institutes for Advanced Topics, Humanities Intensive Learning and Teaching (HILT), and the Digital Humanities Summer Institute (DHSI). While these workshops provide excellent opportunities to gain exposure to new ideas or to dive deep into a particular subject area, they are also dependent upon the expertise of the particular instructors and, depending on the length of the workshop or institute, require substantial commitments of time and money.&lt;/p&gt;
+
+&lt;p&gt;DH Bridge offers an additional model for training in the digital humanities. Building on the model of Rails Bridge and Rails Girls, DH Bridge offers one to two day workshops that provide intensive training in using computational thinking in humanities contexts. What is unique about this model is that the workshops run from a central but open curriculum, one that can be expanded and adjusted for the needs of a particular community but that also removes the need for each workshop to begin from scratch. By using a format that is low-cost, both for participants and for organizers, and focusing on patterns of thinking, rather than use of particular tools, we can effectively work to expand the community of scholars leveraging computational approaches in their research.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 06 May 2015 10:51:43 -0700</pubDate>
+        <link>http://localhost:4000/reflections/2015/05/06/lessons-learned.html</link>
+        <guid isPermaLink="true">http://localhost:4000/reflections/2015/05/06/lessons-learned.html</guid>
+        
+        
+        <category>reflections</category>
+        
+      </item>
+    
+      <item>
+        <title>Computational Thinking Workshop, 1 November 2014</title>
+        <description>&lt;p&gt;&lt;strong&gt;Applications open:&lt;/strong&gt; August 11, 2014&lt;/p&gt;
+
+&lt;h2 id=&quot;dates-and-details&quot;&gt;Dates and Details&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Cost:&lt;/strong&gt; Free!&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Application Closes:&lt;/strong&gt; September 7&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Acceptances Informed:&lt;/strong&gt; September 12&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Install Party and Coaches Dinner:&lt;/strong&gt; October 30&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Workshop:&lt;/strong&gt; November 1&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Location:&lt;/strong&gt; Research Hall, 163&lt;/td&gt;
+      &lt;td&gt;George Mason University&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;schedule&quot;&gt;Schedule&lt;/h2&gt;
+
+&lt;p&gt;&lt;em&gt;Thursday, Oct 30&lt;/em&gt;&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;4:00-6:30&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;Drop in and get help with installations. Meet coaches and fellow participants&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;7:00&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;Coaches Dinner&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;em&gt;Saturday, Nov 1&lt;/em&gt;&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;8:45-9:30&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;Registration and Coffee&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;9:30-10:30&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;Introductions and Lightning Talks&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;10:30-12:00&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;Workshop: Conceptualizing Data&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;12:00-1:00&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;Lunch&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;1:00-4:00&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;Workshop: Constructing and Querying Data with Python&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;4:00-5:30&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;Wrap-up and Next Steps&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;5:30&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;Socialize&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;partners-and-sponsors&quot;&gt;Partners and Sponsors&lt;/h2&gt;
+
+&lt;div class=&quot;sponsor&quot;&gt;
+  &lt;p&gt;&lt;img src=&quot;http://localhost:4000/images/ach-logo.png&quot; alt=&quot;ACH Logo&quot; /&gt;&lt;/p&gt;
+
+  &lt;h3 id=&quot;association-for-computers-and-the-humanities&quot;&gt;&lt;a href=&quot;http://ach.org/&quot;&gt;Association for Computers and the Humanities&lt;/a&gt;&lt;/h3&gt;
+
+&lt;/div&gt;
+
+&lt;div class=&quot;sponsor&quot;&gt;
+  &lt;p&gt;&lt;img src=&quot;http://localhost:4000/images/rrchnm-logo.png&quot; alt=&quot;RRCHNM Logo&quot; /&gt;&lt;/p&gt;
+
+  &lt;h3 id=&quot;roy-rosenzweig-center-for-history-and-new-media&quot;&gt;&lt;a href=&quot;http://chnm.gmu.edu/&quot;&gt;Roy Rosenzweig Center for History and New Media&lt;/a&gt;&lt;/h3&gt;
+
+&lt;/div&gt;
+
+&lt;div class=&quot;sponsor&quot;&gt;
+  &lt;p&gt;&lt;img src=&quot;https://digitalpubliclibraryofamerica.atlassian.net/wiki/download/attachments/2654275/horizontal_logo_blue_withoutWhiteBackground.jpg&quot; alt=&quot;DPLA Logo&quot; /&gt;&lt;/p&gt;
+
+  &lt;h3 id=&quot;digital-public-library-of-america&quot;&gt;&lt;a href=&quot;http://dp.la&quot;&gt;Digital Public Library of America&lt;/a&gt;&lt;/h3&gt;
+
+&lt;/div&gt;
+
+&lt;h3 id=&quot;join-us&quot;&gt;Join Us!&lt;/h3&gt;
+
+&lt;p&gt;If you are interested in being a sponsor or a coach, email us at &lt;a href=&quot;mailto:bridgingdh@gmail.com&quot;&gt;bridgingdh@gmail.com&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Mon, 01 Sep 2014 10:51:43 -0700</pubDate>
+        <link>http://localhost:4000/workshop/2014/09/01/first-dhbridge-workshop.html</link>
+        <guid isPermaLink="true">http://localhost:4000/workshop/2014/09/01/first-dhbridge-workshop.html</guid>
+        
+        
+        <category>workshop</category>
+        
+      </item>
+    
+  </channel>
+</rss>

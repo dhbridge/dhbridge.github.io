@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Lessons Learned from “Bridging the Gap: Women, Code, and the Digital Humanities”</title>
+  <meta name="description" content="Initially published on the Association for Computers and the Humanities site.">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://localhost:4000/reflections/2015/05/06/lessons-learned.html">
+  <link rel="alternate" type="application/rss+xml" title="DH Bridge" href="http://localhost:4000/feed.xml">
+  <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic|Nova+Square' rel='stylesheet' type='text/css'>
+  <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">DH Bridge</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+      	<a class="page-link" href="http://curriculum.dhbridge.org">Curriculum</a>
+        
+          
+          <a class="page-link" href="/about/">About DH Bridge</a>
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Lessons Learned from “Bridging the Gap: Women, Code, and the Digital Humanities”</h1>
+    <p class="post-meta"><time datetime="2015-05-06T10:51:43-07:00" itemprop="datePublished">May 6, 2015</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p><em>Initially published on the <a href="http://ach.org/2015/05/06/bridging-the-gap/">Association for Computers and the Humanities</a> site.</em></p>
+
+<p>This fall we had the opportunity to launch <a href="http://dhbridge.org/">DH Bridge</a>, an open curriculum and workshop framework for teaching computational thinking in the context of the humanities, funded by an ACH microgrant. Borrowing liberally from <a href="http://www.railsbridge.org/">Rails Bridge</a> and <a href="http://railsgirls.com/">Rails Girls</a>, we set out to adapt the model of a distributed pedagogy to the needs of humanities scholars who, while not looking to become programmers per se, want to develop the skills and patterns of thinking necessary to apply computational methods to their scholarship.</p>
+
+<p>Computational thinking is a pattern of problem solving that involves organizing and analyzing data, abstracting in search of patterns, and breaking complex problems into discrete, solvable parts (<a href="https://www.cs.cmu.edu/~15110-s13/Wing06-ct.pdf">Jeannette Wing, 2006</a>, doi: <a href="http://dx.doi.org/10.1145/1118178.1118215">10.1145/1118178.1118215</a>). It enables humanities researchers to formulate new questions and to think through how to leverage both data and computational processes to explore those questions. While these skills may be taught in the context of a particular programming language, in our case Python, the patterns of thought are transferable to any language or computational process.</p>
+
+<p>For the DH Bridge curriculum, we wanted to provide concrete exposure to the ways scholars might leverage data and code in the service of humanities questions. We also wanted participants to leave the workshop with a sense of how to approach a problem computationally, as well as to begin using the computer to perform the desired analysis. To achieve these goals, we used data from the <a href="http://dp.la/">Digital Public Library of America</a> as the foundation for our curriculum and asked participants to explore the ways the collection’s holdings related to “cooking” were gendered. Breaking this abstract question into computationally solvable parts meant walking participants through using the DPLA’s API, parsing the JSON output, isolating particular data points, and using the <a href="http://www.nltk.org/">Natural Language Toolkit</a> for Python to find patterns in the text.</p>
+
+<p>In what follows, we will discuss the pedagogical choices we made, our development process for the curriculum, and lessons learned from the workshop held on November 1, 2014.</p>
+
+<h2 id="pedagogical-choices">Pedagogical Choices:</h2>
+
+<p>Working from our observations and participant feedback from Rails Girls DH, we wanted to make a few deliberate pedagogical changes for the new curriculum:</p>
+
+<p>Work from concrete problem to abstract concepts. 
+Focus on computational thinking and helping participants build a mental model of the computer, data, and working computationally.
+Design the tutorial to potentially be a standalone reference (for people with some programming experience), but pair it with the coaches guide to give a more personalized and enhanced learning experience.</p>
+
+<p>In working purposefully from a concrete problem and data to more abstract concepts, we wanted to provide a clear entry point for humanities scholars. This is the opposite approach from what is commonly pursued in coding tutorials, where concepts and descriptions of terms and elements are defined in the abstract first. We’ve observed that this adds a layer of difficulty for participants in translating to actual implementation. At the same time, we were concerned about the desire to understand “all the details”–meaning the more abstract computer science conceptual foundations–before being willing to play, which can also keep people from being willing to engage with hands-on learning. By starting with a model of computational thinking that considers the computer, data, and research questions in conversation from the beginning, we sought to present a balanced approach between the conceptual and technical.</p>
+
+<p>In terms of the curriculum, there are two main components: a detailed tutorial made up of 14 modules and a coaches’ guide. Each addresses different aspects of the learning goals, although they were conceived to work together and be implemented together by potential future workshop organizers. For people with some programming experience, the tutorial could serve as a standalone reference and step-by-step guide. In putting the tutorial together, it became clear that some of the important context and explanations didn’t fit well within the narrative flow of the modules. We decided that this material would be best served through discussion among the participants and the coaches, and so wrote the coaches’ guide with learning checks, discussion questions, and the key concepts for each module. We wanted to emphasize this social aspect of learning, and we found that could only be achieved through conversations in the room during the workshop itself.</p>
+
+<h2 id="iterative-process">Iterative Process:</h2>
+
+<p>While developing the curriculum, we asked for and received substantive feedback from a number of our peers and professors. Knowing that participants would likely be a mix of Mac and Windows users, we wrote instructions for each and repeatedly tested the tutorial on both operating systems. Two weeks prior to the workshop, we got together with a number of the coaches for a dress rehearsal of the curriculum. We gathered valuable feedback and made final tweaks, clarified directions in the tutorial, fleshed out concepts, and added parts to the coaches guide to reinforce our model of computational thinking and keep everything aligned with the learning goals.</p>
+
+<h2 id="lessons-learned">Lessons Learned:</h2>
+
+<p>For this kind of workshop, we found that a participant to coach ratio of 2-3 to 1 seemed to work much better than our Rails Girls DH ratio of 5 to 1. For DH Bridge, there were plenty of coaches around to answer questions and troubleshoot, so participants were generally not stuck for long. One thing that we noticed was how the ratio affected collaborative group activities. Participants on the whole progressed at their own pace, which was great, but this made it difficult to stop for the learning checks and discussions we’d built into the modules. Also, the number of coaches at hand made participants more likely to ask them immediately for help rather than hash problems out with their group members. Balancing the asynchronous and synchronous aspects will be an ongoing consideration as we refine our workshop model. We gathered feedback informally after the event and through an optional survey. Several DH Bridge participants shared with us that they believed in their ability to translate the skills and concepts gained throughout the day to their current work, but we have yet to develop an effective way of assessing long-term learning. Maintaining a sense of community and following-up with participants is also a tricky proposition for us since participants came from a range of institutions across the DC metro area and from as far as Davidson College in North Carolina.</p>
+
+<h2 id="next-steps">Next Steps:</h2>
+
+<p>In the near future we will work to fix the small errors that were encountered as part of the event. We also plan to review feedback from the participants and coaches to assess what other adjustments are needed going forward. Longer term goals include writing a version of the tutorials for Python3, as well as soliciting ideas for additional modules that would be useful for humanities scholars. In addition, we would like to think through how to continue efforts to effectively partner with underrepresented populations to help more interested people take part in DH Bridge.</p>
+
+<p>There are an ever increasing number of opportunities for training in the digital humanities, from informal workshops held at THATCamps to multiple week training programs, such as the NEH Institutes for Advanced Topics, Humanities Intensive Learning and Teaching (HILT), and the Digital Humanities Summer Institute (DHSI). While these workshops provide excellent opportunities to gain exposure to new ideas or to dive deep into a particular subject area, they are also dependent upon the expertise of the particular instructors and, depending on the length of the workshop or institute, require substantial commitments of time and money.</p>
+
+<p>DH Bridge offers an additional model for training in the digital humanities. Building on the model of Rails Bridge and Rails Girls, DH Bridge offers one to two day workshops that provide intensive training in using computational thinking in humanities contexts. What is unique about this model is that the workshops run from a central but open curriculum, one that can be expanded and adjusted for the needs of a particular community but that also removes the need for each workshop to begin from scratch. By using a format that is low-cost, both for participants and for organizers, and focusing on patterns of thinking, rather than use of particular tools, we can effectively work to expand the community of scholars leveraging computational approaches in their research.</p>
+
+  </div>
+
+</article>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">DH Bridge</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>DH Bridge</li>
+          <li><a href="mailto:bridgingdh@gmail.com">bridgingdh@gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/dhbridge"><span class="icon icon--github"><svg viewBox="0 0 16 16"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">dhbridge</span></a>
+
+          </li>
+          
+
+          
+          <li>
+            <a href="https://twitter.com/dhbridge"><span class="icon icon--twitter"><svg viewBox="0 0 16 16"><path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/></svg>
+</span><span class="username">dhbridge</span></a>
+
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>Encouraging Computational Thinking and Digital Skills in the Humanities
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
